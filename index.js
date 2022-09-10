@@ -1,8 +1,11 @@
+// team profiles
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
-// TODO: CODE GOES HERE
+// node modules
+const fs = require('fs');
+const inquirer = require('inquirer');
 
 const manager = new Manager();
 const emp1 = "[]";
