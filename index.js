@@ -1,4 +1,4 @@
-// team profiles
+// employee profiles
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -7,20 +7,13 @@ const Intern = require('./lib/Intern');
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-const manager = new Manager();
-const emp1 = "[]";
-const inform = manager.inform(emp1)
+// employee array 
+const employeeArray = [];
 
-console.log(emp1, "->", inform)
+// add manager
 
-const engineer = new Engineer();
-const emp2 = "[]";
-const inform2 = engineer.inform2(emp2)
+// add empolyees
 
-console.log(emp2, "->", inform2)
+// add data for employee types
 
-const intern = new Intern
-const emp3 = "[]";
-const inform3 = intern.inform3(emp3)
-
-console.log(emp3, "->", inform3)
+// generate HTML page file using FS

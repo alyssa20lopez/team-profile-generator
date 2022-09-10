@@ -10,12 +10,30 @@ it("should create an object for employess info", () => {
   expect(employee.email).toEqual(expect.any(String));
 });
 
-// get id from first string in object
+// get name from getName()
 it('employee name', () => {
   const employee = new Employee('Alyssa', 1015,'alyssa20lopez@gmail.com');
 
-  expect(employee.name).toEqual(expect.any(String));
+  expect(employee.getName()).toEqual(expect.any(String));
 });
 
-// get id from first number in object
-// get id from second string in object
+// gets id from getId()
+it('employee id', () => {
+  const employee = new Employee('Alyssa', 1015,'alyssa20lopez@gmail.com');
+
+  expect(employee.getId()).toEqual(expect.any(Number));
+});
+
+// gets email from getEmail()
+it('employee email', () => {
+  const employee = new Employee('Alyssa', 1015,'alyssa20lopez@gmail.com');
+
+  expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
+});
+
+// gets role from getRole()
+it('employee email', () => {
+  const employee = new Employee('Alyssa', 1015,'alyssa20lopez@gmail.com');
+
+  expect(employee.getRole()).toEqual("Employee");
+});
