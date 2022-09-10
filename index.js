@@ -12,12 +12,12 @@ console.log(emp1, "->", inform)
 
 const engineer = new Engineer();
 const emp2 = "[]";
-const inform = engineer.inform(emp2)
+const inform2 = engineer.inform2(emp2)
 
-console.log(emp2, "->", inform)
+console.log(emp2, "->", inform2)
 
 const intern = new Intern
 const emp3 = "[]";
-const inform = intern.inform(emp3)
+const inform3 = intern.inform3(emp3)
 
-console.log(emp3, "->", inform)
+console.log(emp3, "->", inform3)
