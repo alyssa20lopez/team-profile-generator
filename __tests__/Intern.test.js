@@ -11,7 +11,7 @@ it("object for intern", () => {
 it("intern's school", () => {
   const intern = new Intern('Alyssa', 1015,'alyssa20lopez@gmail.com', 'UNCC');
 
-  expect(intern.getSchool()).toEqual(expect.stringContaining(intern.schoolName.toString()));
+  expect(intern.getSchoolName()).toEqual(expect.stringContaining(intern.schoolName.toString()));
 });
 
 // finds role from getRole()
