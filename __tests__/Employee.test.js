@@ -2,7 +2,7 @@
 const Employee = require("../lib/Employee");
 
 // create object for employee
-it("should create an object for employess info", () => {
+it("object for employee", () => {
   const employee = new Employee('Alyssa', 1015,'alyssa20lopez@gmail.com');
 
   expect(employee.name).toEqual(expect.any(String));
@@ -32,7 +32,7 @@ it('employee email', () => {
 });
 
 // finds role from getRole()
-it('employee role', () => {
+it('role of employee', () => {
   const employee = new Employee('Alyssa', 1015,'alyssa20lopez@gmail.com');
 
   expect(employee.getRole()).toEqual("Employee");
