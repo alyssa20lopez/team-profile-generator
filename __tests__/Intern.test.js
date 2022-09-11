@@ -11,7 +11,7 @@ it("object for intern", () => {
 });
 
 // finds school from getSchool()
-it("intern's school", () => {
+it("school", () => {
   const intern = new Intern('Alyssa', 1015,'alyssa20lopez@gmail.com', 'UNCC');
 
   expect(intern.getSchoolName()).toEqual(expect.stringContaining(intern.schoolName.toString()));

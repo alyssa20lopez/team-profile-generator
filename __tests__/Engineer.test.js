@@ -12,7 +12,7 @@ it("object for engineer", () => {
 it("github username", () => {
   const engineer = new Engineer('Alyssa', 1015, 'alyssa20lopez@gmail.com', 'alyssa20lopez');
 
-  expect(engineer.getGithubUser()).toEqual(expect.stringContaining(intern,githubUser.toString()))
+  expect(engineer.getGithubUser()).toEqual(expect.stringContaining(engineer.githubUser.toString()))
 });
 
 // finds role form getRole()
