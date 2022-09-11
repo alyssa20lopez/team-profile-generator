@@ -1,19 +1,49 @@
-// employee profiles
+// packages
+const fs = require('fs');
+const inquirer = require('inquirer');
+const generateHTML = require('./src/generateHTML');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
-// node modules
-const fs = require('fs');
-const inquirer = require('inquirer');
+// class containg questions
 
-// employee array 
-const employeeArray = [];
 
-// add manager
+// questions
+questions() {
+  inquirer.prompt( 
+    {
+      type: 'list',
+      name: 'employeeRole',
+      message: 'Which role would you like to add to the team?',
+      choices: [
+      'Engineer',
+      'Intern',
+      'Manager',
+      'Not Applicable'
+      ]
+    })
+    .then(({employeeRole}) => {
+      if(employeeRole === 'Manager'){
+        inquirer.prompt([
+    {
+      type: 'input',
+      name: 'name',
+      message: "What is the manager's name?",
+      validate: nameValue => {
+        if (nameValue) {
+          return true;
+        } else {
+          console.log("Please enter a valid name!")
+          return false;
+        }
+      }
+    },
 
-// add empolyees
 
-// add data for employee types
+    
+        ])
+      }
+    })
 
 // generate HTML page file using FS

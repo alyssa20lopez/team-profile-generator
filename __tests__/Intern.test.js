@@ -1,5 +1,8 @@
 const Intern = require("../lib/Intern");
 
+const {expect} = require('@jest/globals')
+const Intern = require('../lib/Intern')
+
 // intern’s name, ID, email, and school
 it("object for intern", () => {
   const intern = new Intern('Alyssa', 1015,'alyssa20lopez@gmail.com', 'UNCC');

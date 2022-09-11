@@ -1,4 +1,5 @@
 // use Employee constructor
+const {expect} = require('@jest/globals')
 const Employee = require("../lib/Employee");
 
 // create object for employee
@@ -32,7 +33,7 @@ it('employee email', () => {
 });
 
 // finds role from getRole()
-it('role of employee', () => {
+it('employee role', () => {
   const employee = new Employee('Alyssa', 1015,'alyssa20lopez@gmail.com');
 
   expect(employee.getRole()).toEqual("Employee");
