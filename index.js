@@ -30,38 +30,22 @@ function questions() {
           {
             type: 'input',
             name: 'name',
-            message: "What is the manager's name?",
+            message: "What is the manager's name?"
           },
           {
             type: 'number',
             name: 'id',
-            message: "What is the manager's id?",
+            message: "What is the manager's id?"
           },
           {
             type: 'input',
             name: 'email',
-            message: "What is the manager's email?",
-            validate: emailValue => {
-              if (emailValue) {
-                return true;
-              } else {
-                console.log("Please enter a valid email address!");
-                return false;
-              }
-            }
+            message: "What is the manager's email?"
           },
           {
             type: 'number',
             name: 'officeNum',
-            message: "What is the manager's office number?",
-            validate: officeNumValue => {
-              if (officeNumValue) {
-                return true;
-              } else {
-                console.log("Please enter a valid office number!");
-                return false;
-              }
-            }
+            message: "What is the manager's office number?"
           },
         ])
           // pushes manager data into arr
@@ -77,54 +61,22 @@ function questions() {
           {
             type: 'input',
             name: 'name',
-            message: "What is the engineer's name?",
-            validate: nameValue => {
-              if (nameValue) {
-                return true;
-              } else {
-                console.log("Please enter a valid name!");
-                return false;
-              }
-            }
+            message: "What is the engineer's name?"
           },
           {
             type: 'number',
             name: 'id',
-            message: "What is the engineer's id?",
-            validate: idValue => {
-              if (idValue) {
-                return true;
-              } else {
-                console.log("Please enter a valid id!");
-                return false;
-              }
-            }
+            message: "What is the engineer's id?"
           },
           {
             type: 'input',
             name: 'email',
-            message: "What is the engineer's email?",
-            validate: emailValue => {
-              if (emailValue) {
-                return true;
-              } else {
-                console.log("Please enter a valid email address!");
-                return false;
-              }
-            }
+            message: "What is the engineer's email?"
           },
           {
             type: 'input',
             name: 'github',
-            message: "What is the engineer's GitHub Username?",
-            validate: githubUser => {
-              if (githubUser) {
-                return true;
-              } else {
-                console.log("Please enter a valid GitHub Username!")
-                return false;
-              }
-            }
+            message: "What is the engineer's GitHub Username?"
           },
           // pushes engineer info data arr
         ]).then(template => {
@@ -139,54 +91,22 @@ function questions() {
           {
             type: 'input',
             name: 'name',
-            message: "What is the intern's name?",
-            validate: nameValue => {
-              if (nameValue) {
-                return true;
-              } else {
-                console.log("Please enter a valid name!")
-                return false;
-              }
-            }
+            message: "What is the intern's name?"
           },
           {
             type: 'number',
             name: 'id',
-            message: "What is the intern's id?",
-            validate: idValue => {
-              if (idValue) {
-                return true;
-              } else {
-                console.log("Please enter a valid id!")
-                return false;
-              }
-            }
+            message: "What is the intern's id?"
           },
           {
             type: 'input',
             name: 'email',
-            message: "What is the intern's email?",
-            validate: emailValue => {
-              if (emailValue) {
-                return true;
-              } else {
-                console.log("Please enter a valid email address!")
-                return false;
-              }
-            }
+            message: "What is the intern's email?"
           },
           {
             type: 'input',
             name: "school",
-            message: "Where does the intern attend school?",
-            validate: schoolName => {
-              if (schoolName) {
-                return true;
-              } else {
-                console.log("Please enter the correct school name!")
-                return false;
-              }
-            }
+            message: "Where does the intern attend school?"
           },
         ])
           // pushes intern data into arr
