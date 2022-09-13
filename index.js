@@ -21,11 +21,10 @@ function questions() {
         'Engineer',
         'Intern',
         'Manager',
-        'None']
+        'I am finished with my team!']
     })
-    .then((answers) => {
-      if (answers.employeeRole === 'Manager') {
-        console.log('Manager!');
+    .then((response) => {
+      if (response.employeeRole === 'Manager') {
         inquirer.prompt([
           {
             type: 'input',
@@ -49,14 +48,14 @@ function questions() {
           },
         ])
           // pushes manager data into arr
-          .then((template) => {
-            const addManager = new Manager(template.name, template.id, template.email, template.officeNum)
+          .then((response) => {
+            const addManager = new Manager(response.name, response.id, response.email, response.officeNum)
             employeeArray.push(addManager);
 
             questions();
           });
 
-      } else if (employeeRole === 'Engineer') {
+      } else if (response.employeeRole === 'Engineer') {
         inquirer.prompt([
           {
             type: 'input',
@@ -79,14 +78,14 @@ function questions() {
             message: "What is the engineer's GitHub Username?"
           },
           // pushes engineer info data arr
-        ]).then(template => {
-          const addEngineer = new Engineer(template.name, template.id, template.email, template.github)
-          this.employeeArray.push(addEngineer);
-          // user back to menu
-          this.questions();
+        ]).then(response => {
+          const addEngineer = new Engineer(response.name, response.id, response.email, response.github)
+          employeeArray.push(addEngineer);
+          // sends user back to menu
+          questions();
         });
 
-      } else if (employeeRole === 'Intern') {
+      } else if (response.employeeRole === 'Intern') {
         inquirer.prompt([
           {
             type: 'input',
@@ -110,14 +109,14 @@ function questions() {
           },
         ])
           // pushes intern data into arr
-          .then((template) => {
-            const addIntern = new Intern(template.name, template.id, template.email, template.schoolName)
-            this.employeeArray.push(addIntern);
+          .then((response) => {
+            const addIntern = new Intern(response.name, response.id, response.email, response.schoolName)
+            employeeArray.push(addIntern);
 
-            this.questions();
+            questions();
           });
 
-      } else if (employeeRole === 'Done') {
+      } else if (response.employeeRole === 'Done') {
         const createHTML = generateHTML(employeeArray);
         fs.writeFile('./dist/index.html', createHTML, function (err) {
           if (err) throw err
