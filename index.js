@@ -1,7 +1,7 @@
 // packages
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateHTML = require('./dist/team.html');
+const generateHTML = require('./src/page-template.js');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -116,9 +116,9 @@ function questions() {
             questions();
           });
 
-      } else if (response.employeeRole === 'Done') {
+      } else if (response.employeeRole === 'I am finished with my team!') {
         const createHTML = generateHTML(employeeArray);
-        fs.writeFile('./dist/index.html', createHTML, function (err) {
+        fs.writeFile('./dist/team.html', createHTML, function (err) {
           if (err) throw err
 
           console.log('HTML file has been created!')
