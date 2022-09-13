@@ -6,19 +6,12 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
-// employeeArray
-class Prompt {
-  constructor() {
-    this.employeeArray = [];
-  }
-
-  getEmployeeArray() {
-    return this.employeeArray;
-  }
-}
+let employeeArray = [];
 
 // questions
-questions() {
+questions();
+
+function questions() {
   inquirer.prompt(
     {
       type: 'list',
@@ -30,34 +23,19 @@ questions() {
         'Manager',
         'None']
     })
-    .then(({ employeeRole }) => {
-      if (employeeRole === 'Manager'){
+    .then((answers) => {
+      if (answers.employeeRole === 'Manager') {
+        console.log('Manager!');
         inquirer.prompt([
           {
             type: 'input',
             name: 'name',
             message: "What is the manager's name?",
-            validate: nameValue => {
-              if (nameValue) {
-                return true;
-              } else {
-                console.log("Please enter a valid name!");
-                return false;
-              }
-            }
           },
           {
             type: 'number',
             name: 'id',
             message: "What is the manager's id?",
-            validate: idValue => {
-              if (idValue) {
-                return true;
-              } else {
-                console.log("Please enter a valid id!");
-                return false;
-              }
-            }
           },
           {
             type: 'input',
@@ -89,9 +67,9 @@ questions() {
           // pushes manager data into arr
           .then((template) => {
             const addManager = new Manager(template.name, template.id, template.email, template.officeNum)
-            this.employeeArray.push(addManager);
+            employeeArray.push(addManager);
 
-            this.questions();
+            questions();
           });
 
       } else if (employeeRole === 'Engineer') {
@@ -137,7 +115,7 @@ questions() {
           },
           {
             type: 'input',
-            name: 'github username',
+            name: 'github',
             message: "What is the engineer's GitHub Username?",
             validate: githubUser => {
               if (githubUser) {
@@ -150,7 +128,7 @@ questions() {
           },
           // pushes engineer info data arr
         ]).then(template => {
-          const addEngineer = new Engineer(template.name, template.id, template.email, template.githubUser)
+          const addEngineer = new Engineer(template.name, template.id, template.email, template.github)
           this.employeeArray.push(addEngineer);
           // user back to menu
           this.questions();
@@ -220,7 +198,7 @@ questions() {
           });
 
       } else if (employeeRole === 'Done') {
-        const createHTML = generateHTML(this.getEmployeeArray());
+        const createHTML = generateHTML(employeeArray);
         fs.writeFile('./dist/index.html', createHTML, function (err) {
           if (err) throw err
 
@@ -228,10 +206,4 @@ questions() {
         });
       }
     })
-}
-
-// starts prompts
-const prompt = new Prompt();
-prompt.questions();
-
-module.exports = Prompt;
+};

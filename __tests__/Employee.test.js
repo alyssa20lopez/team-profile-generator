@@ -31,7 +31,7 @@ it('should get employee email', () => {
   expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
 });
 
-// finds role from getRole()
+// gets role from getRole()
 it('should get employee role', () => {
   const employee = new Employee('Alyssa', 1015,'alyssa20lopez@gmail.com');
 
