@@ -9,7 +9,7 @@ Module 10: Object-Oriented Programming
 ## Description
 This is a Node.js command-line application that will take in information about employees on a software engineering team and will generate an HTML webpage that displays summaries for each person. This will use an Inquirer and Jest package.
 
-[Link to live site](https://alyssa20lopez.github.io/team-profile-generator/)
+[Link to Repo](https://github.com/alyssa20lopez/team-profile-generator)
 
 ## Visuals
 Here is a visual of the front-end of the webpage design.
