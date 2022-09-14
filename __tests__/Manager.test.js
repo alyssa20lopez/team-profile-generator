@@ -5,7 +5,7 @@ const Manager = require("../lib/Manager");
 it("should create manager officeNumber", () => {
   const manager = new Manager('Alyssa', 1015,'alyssa20lopez@gmail.com', 1);
   
-  expect(manager.officeNumber).toEqual(expect.any(Number));
+  expect(manager.getOfficeNumber()).toEqual(expect.any(Number));
 });
 
 // gets role from getRole()

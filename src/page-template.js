@@ -124,7 +124,7 @@ module.exports = team => {
     </head>
     <body>
         <header>
-            <h1>My Team</h1>
+            <h1 class="text-center bg-dark>My Team</h1>
         </header>
         <main>
             ${generateTeam(team)}
