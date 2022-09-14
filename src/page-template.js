@@ -5,85 +5,86 @@ const generateTeam = team => {
     // create the manager html
     const generateManager = manager => {
         return `
-        <div class="row">
-            <div class="col-12 col-lg-12">
-                <div class="card border-dark">
-                    <div class="card-header">
+            <div class="col-sm-3 mx-5 my-2 card" style="width:22rem">
+                <div class="card-body p-0 rounded-top justify-content-center">
+                    <div class="card-header bg-dark text-white px-4">
                         <h2>${manager.getName()}</h2>
                         <h3>
                             <i class="fas fa-mug-hot mr-2"></i> ${manager.getRole()}
                         </h3>
                     </div>
-                    <div class="card-body">
-                        <ul class="card-text">
-                            <li>
+                    <div class="bg-light">
+                        <ul class="list-group p-3">
+                            <li class="list-group-item">
                                 ID: ${manager.getId()}
                             </li>
-                            <li>
+                            <li class="list-group-item">
                                 Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a>
                             </li>
-                            <li>
+                            <li class="list-group-item">
                                 Office number: ${manager.getOfficeNumber()}
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div
         `;
     };
 
     // create the html for engineers
     const generateEngineer = engineer => {
         return `
-        <div class="row">
-            <div class="col-12 col-lg-12">
-                <div class="card border-dark">
-                    <div class="card-header">
+            <div class="col-sm-3 mx-5 my-2 card px-0" style="width:22rem">
+                <div class="card-body p-0 rounded-top justify-content-center">
+                    <div class="card-header bg-dark text-white px-4">
                         <h2>${engineer.getName()}</h2>
                         <h3>
                             <i class="fas fa-glasses mr-2"></i>${engineer.getRole()}
                         </h3>
                     </div>
-                    <div class="card-body">
-                        <ul class="card-text">
-                            <li>ID: ${engineer.getId()}</li>
-                            <li>
+                    <div class="bg-light">
+                        <ul class="list-group p-2">
+                            <li class="list-group-item">
+                                ID: ${engineer.getId()}</li>
+                            <li class="list-group-item">
                                  Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a>
                             </li>
-                            <li>
+                            <li class="list-group-item">
                                 GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank" rel="noopener noreferrer">${engineer.getGithub()}</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>    
+            </div>   
         `;
     };
 
     // create the html for interns
     const generateIntern = intern => {
         return `
-        <div class="row">
-            <div class="col-12 col-lg-12">
-                <div class="card border-dark">
-                    <div class="card-header">
+            <div class="col-sm-3 mx-5 my-2 card" style="width:22rem">
+                <div class="card-body p-0 rounded-top justify-content-center">
+                    <div class="card-header bg-dark text-white px-4">
                         <h2>${intern.getName()}</h2>
                         <h3>
                             <i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}
                         </h3>
                     </div>
-                    <div class="card-body">
-                        <ul class="card-text">
-                            <li>ID: ${intern.getId()}</li>
-                            <li>${intern.getEmail()}</a></li>
-                            <li>School: ${intern.getSchool()}</li>
-                        </ul>
-                    </div>
+                </div>    
+                <div class="bg-light">
+                    <ul class="list-group p-2">
+                        <li class="list-group-item">
+                            ID: ${intern.getId()}
+                        </li>
+                        <li class="list-group-item">
+                            Email: ${intern.getEmail()}</a>
+                        </li>
+                        <li class="list-group-item">
+                            School: ${intern.getSchool()}
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </div>    
+            </div> 
         `;
     };
 
@@ -124,10 +125,18 @@ module.exports = team => {
     </head>
     <body>
         <header>
-            <h1 class="text-center bg-dark>My Team</h1>
+            <div class="text-center">
+                <nav class="navabar bg-dark text-white text-center pt-3 pb-5">
+                    <div>
+                        <h1>My Team</h1>
+                    </div>
+                </nav>
+            </div>
         </header>
         <main>
-            ${generateTeam(team)}
+            <div>
+                ${generateTeam(team)}
+            </div>
         </main>
     </body>
 </html>
