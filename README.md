@@ -14,6 +14,5 @@ This is a Node.js command-line application that will take in information about e
 ## Visuals
 Here is a visual of the front-end of the webpage design.
 
-![Alt text](./assets/team-profile-generator.png)
 <!-- Link to Walkthrough Video -->
-![Alt text](./assets/team-profile-generator.png) 
+[Video Walkthrough](https://drive.google.com/file/d/1whpD1uELmWJDCkq6gGeHp-A1Es7FMYbk/view) 
