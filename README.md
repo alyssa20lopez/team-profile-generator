@@ -15,7 +15,7 @@ This is a Node.js command-line application that will take in information about e
 
 ## Submission
 
-[HTML Sample Page](https://github.com/alyssa20lopez/team-profile-generator/blob/main/template.html) 
+[HTML Sample Page](https://github.com/alyssa20lopez/team-profile-generator/blob/08ee7adc37380147f73194f00cc48f145e20e564/sample-page.html) 
 
 ## Usage
 To use this application, first clone the project and navigate to VS Code. In the command-line, install the following packages:
@@ -24,7 +24,9 @@ To use this application, first clone the project and navigate to VS Code. In the
 To start the application, type 'node indez.js' in the command-line.
 
 ## Visuals
-Here is a visual of the front-end of the webpage design.
+Here is a visual of the front-end of the webpage design and walkthrough video.
+
+![Alt text](./assets/images/team-generator.png)
 
 <!-- Link to Walkthrough Video -->
-[Video Walkthrough](https://drive.google.com/file/d/1whpD1uELmWJDCkq6gGeHp-A1Es7FMYbk/view) 
+[Click this link to access the walkthrough video](https://drive.google.com/file/d/1IwlalUKHNzmmJyYSRRIMdsLiB4NsU7Dc/view) 
