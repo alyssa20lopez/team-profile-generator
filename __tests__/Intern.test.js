@@ -5,14 +5,14 @@ const Intern = require("../lib/Intern");
 it("should create intern school", () => {
   const intern = new Intern('Alyssa', 1015,'alyssa20lopez@gmail.com', 'UNCC');
   
-  expect(intern.school).toEqual(expect.stringContaining(intern.school.toString()));
+  expect(intern.school).toEqual(expect.any(String));;
 });
 
 // gets school from getSchool()
 it("should get school", () => {
   const intern = new Intern('Alyssa', 1015,'alyssa20lopez@gmail.com', 'UNCC');
 
-  expect(intern.getSchool()).toEqual(expect.stringContaining(intern.school.toString()));
+  expect(intern.getSchool()).toEqual("UNCC");;
 });
 
 // getss role from getRole()
